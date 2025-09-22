@@ -19,39 +19,39 @@ while (budget > 0)
     int bet = Convert.ToInt32(Console.ReadLine());
     Console.Clear();
 
-    if (bet > budget)
+    while(bet > budget)
     {
     
         Console.WriteLine("Get the fuck out of here. Nigga boy");
+       
         
-    }
+    } 
+    
+
+        
 
     Console.WriteLine("Do you want to bet on red or black?");
     string choice = Console.ReadLine();
     int number = rand.Next(0, 37);
-    string color;
+    string color = Getcolor(number);
+
+    Console.WriteLine($"the ball landed on {number} ({color})!");
+
+    if (choice == color)
+    {
+        budget += bet;
+        Console.WriteLine("Du vann");
+    }
+    else
+    {
+        budget -= bet;
+        Console.WriteLine("du har förlorat");
+    }
+
+
+
 }
 
-
-
-
-
-// Förenklad regel udda = röd, jämn = svart 0 = grönt
-
-
-
-
-if (number == 0)
-{
-    color = "green";
-} else if (number % 2 == 0 )
-{
-    color = "svart";
-}
-else
-{
-    color = "red";
-}
 
 
 
