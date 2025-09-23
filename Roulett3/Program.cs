@@ -18,22 +18,19 @@ while (budget > 0)
     Console.WriteLine("How much do you want to bet");
     int bet = Convert.ToInt32(Console.ReadLine());
     Console.Clear();
-
-    while(bet > budget)
+    §
+    if (bet > budget || bet <= 0)
     {
-    
-        Console.WriteLine("Get the fuck out of here. Nigga boy");
-       
-        
-    } 
-    
+        Console.WriteLine("You can't bet more than your budget!!");
+        continue;
+    }
 
         
 
     Console.WriteLine("Do you want to bet on red or black?");
     string choice = Console.ReadLine();
     int number = rand.Next(0, 37);
-    string color = Getcolor(number);
+    string color = GetColor(number);
 
     Console.WriteLine($"the ball landed on {number} ({color})!");
 
@@ -48,10 +45,20 @@ while (budget > 0)
         Console.WriteLine("du har förlorat");
     }
 
+    
+    
+
+    static string GetColor(int number)
+    {
+        if (number == 0) return "green";
+        return (number % 2 == 0) ?"black" : "red";
+    }
+
 
 
 }
 
-
+Console.ForegroundColor= ConsoleColor.Red;
+Console.WriteLine("Game Over!");
 
 
