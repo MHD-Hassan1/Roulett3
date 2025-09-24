@@ -58,7 +58,5 @@ while (budget > 0)
 
 }
 
-Console.ForegroundColor= ConsoleColor.Red;
-Console.WriteLine("Game Over!");
 
 
