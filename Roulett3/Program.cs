@@ -18,7 +18,7 @@ while (budget > 0)
     Console.WriteLine("How much do you want to bet");
     int bet = Convert.ToInt32(Console.ReadLine());
     Console.Clear();
-    §
+    
     if (bet > budget || bet <= 0)
     {
         Console.WriteLine("You can't bet more than your budget!!");
